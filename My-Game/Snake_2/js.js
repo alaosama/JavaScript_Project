@@ -74,3 +74,85 @@ function main(timestamp) {
         noteElemnt.innerHTML = `${error.message}. Press space to reset the game`;
     }
 }
+
+window.requestAnimationFrame(main);
+
+function step() {
+    // Calculate the next position and add it to the snake
+
+    const newHeadPosition = getNextPosition();
+    snakePositions.push(newHeadPosition);
+
+    // Drop tail
+    if(newHeadPosition != applePosition) {
+        const previousTail = tiles[snakePositions[0]];
+        previousTail.style.backgroundColor = "transparent";
+        snakePositions.shift();
+    }
+
+    // Draw new head
+    const head = tiles[newHeadPosition];
+    head.style.backgroundColor = "black";
+}
+
+
+let inputs = [];
+
+function getNextPosition() {
+    const headPosition = snakePositions[snakePositions.length -1];
+    const snakeDirection = inputs.shift() || snakeDirection();
+    switch(snakeDirection) {
+        case "right": {
+            const nextPosition = headPosition + 1;
+            if (nextPosition % width == 0) throw Error("The snake hit the wall");
+            if (snakePositions.includes(nextPosition)) throw Error("the snake bit itself");
+            return nextPosition;
+        }
+        case "left": {
+            const nextPosition = headPosition - 1;
+            if (nextPosition % width == width - 1 || nextPosition < 0) throw Error("The snake hit the wall");
+            if (snakePositions.includes(nextPosition)) throw Error("The snake bit itself")
+            return nextPosition;
+        }
+        case "down": {
+            const nextPosition = headPosition + width;
+            if (nextPosition > width * height - 1) throw Error("The snake hit the wall");
+            if (snakePositions.includes(nextPosition)) throw Error("The snake bit itself")
+            return nextPosition;
+        }
+        case "up": {
+            const nextPosition = headPosition - width;
+            if (nextPosition < 0) throw Error("The snake hit the wall");
+            if (snakePositions.includes(nextPosition)) throw Error("The snake bit itself")
+            return nextPosition;
+        }
+    }
+}
+
+const headPosition = snakePositions[0];
+const snakeHead = tiles[headPosition];
+
+if (direction == "right")
+    snakeHead.style.cssText = `left: 0; width: ${percentage}%, background-color: black;`;
+
+if (direction == "left")
+    snakeHead.style.cssText = `right: 0; width: ${percentage}%, background-color: black;`;
+
+if (direction == "down")
+    snakeHead.style.cssText = `top: 0; height: ${percentage}%, background-color: black;`;
+
+if (direction == "up")
+    snakeHead.style.cssText = `bottom: 0; height: ${percentage}%, background-color: black;`;
+
+for (const i of snakePositions.slice(1, -1)) {
+    const snakeBody = tiles[i];
+    snakeBody.style.cssText = `background-color: black;`;
+}
+
+
+if (direction == "right")
+    setTile(snakeHead, {
+    left: 0,
+    width: `${percentage}%`,
+    "background-color": color,
+});
