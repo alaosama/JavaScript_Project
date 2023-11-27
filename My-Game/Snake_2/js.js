@@ -40,3 +40,37 @@ window.addEventListener("keydown", function(event) {
         return
     }
 });
+
+let startTimestamp;
+let stepsTaken = 0;
+let score = 0;
+
+constscoreElement = document.querySelector(".score");
+const noteElemnt = document.querySelector("footer");
+
+function main(timestamp) {
+    try {
+        if (startTimestamp == undefined) startTimestamp = timestamp;
+        const totalElapsedTime = timestamp - startTimestamp;
+        const stepsShouldHaveTaken = Math.floor(totalElapsedTime / speed);
+    
+        // If it's time to take a step 
+        if (stepsTaken != stepsShouldHaveTaken) {
+            step();
+            stepsTaken++;
+
+            //If the snake just step on an apple tile
+            const headPosition = snakePositions[snakePositions.length - 1]
+            if (headPosition == applePosition) {
+                score++;
+                scoreElement.innerText = score;
+
+                addNewApple();
+            }
+        }
+    
+    window.requestAnimationFrame(main);
+    } catch(error) {
+        noteElemnt.innerHTML = `${error.message}. Press space to reset the game`;
+    }
+}
