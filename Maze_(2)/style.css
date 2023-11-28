@@ -1,1 +1,48 @@
+.maze {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
 
+body {
+    --ball-color: #f06449;
+}
+
+.ball {
+    position: absolute;
+    margin-top: -5px;
+    margin-left: -5px;
+    border-radius: 50%;
+    background-color: var(--ball-color);
+    width: 10px;
+    height: 10px;
+}
+
+.wall {
+    position: absolute;
+    background-color: black;
+    transform-origin: top center;
+}
+
+.wall::before,
+.wall::after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.wall::before {
+    top: -10px;
+}
+
+.wall::after {
+    bottom: -10px;
+}
+
+.game {
+    perspective: 600px;
+}
