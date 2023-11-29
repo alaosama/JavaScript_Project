@@ -73,3 +73,20 @@ window.addEventListener("mousemove", function (event) {
             transform: rotateY(${rotationY}deg) rotateX(${-rolationX}deg)`;
     }
 })
+let accelerationX;
+let accelerationY;
+
+window.addEventListener("mousemove", function (event) {
+    if (gameInProgress) {
+        const mousDeltaX = -Math.max(Math.min(mousDeltaX - event.clientX, 15) -15);
+        const mousDeltaY =  -Math.max(Math.min(mousDeltaY - event.clientX, 15) -15);
+    
+        const rolationY = mousDeltaX * 0.8;
+        const rolationX = mouseStartY * 0.8;
+
+        const gravity = 2;
+
+        accelerationX = gravity * Math.sin(rolationY / 180 * Math.PI);
+        accelerationY = gravity * Math.sin((rolationX / 180 * Math.PI));
+    }
+});
