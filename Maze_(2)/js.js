@@ -90,3 +90,35 @@ window.addEventListener("mousemove", function (event) {
         accelerationY = gravity * Math.sin((rolationX / 180 * Math.PI));
     }
 });
+
+let previousTimestamp;
+
+function main(timestamp) {
+    if (previousTimestamp === undefined) {
+        previousTimestamp = timestamp;
+        window.requestAnimationFrame(main);
+        return;
+    }
+
+    const timeElapsed = (timestamp - previousTimestamp) / 16;
+
+    const velocityChangeX = accelerationX * timeElapsed;
+    const velocityChangeY = accelerationY * timeElapsed;
+
+    balls.forEach((ball) => {
+        ball.velocityX = ball.velocityX + velocityChangeX;
+        ball.velocityY = ball.velocityY + velocityChangeY;
+        ball.velocityX = Math.max(Math.min(ball.velocityX, 1.5), -1.5);
+        ball.velocityX = Math.max(Math.min(ball.velocityX, 1.5), -1.5);
+
+        // Collision detection that might alter position and velocity
+        // ...
+
+        ball.x = ball.x + ball.velocityX;
+        ball.y = ball.y + ball.velocityY;
+    });
+
+    balls.forEach(({x, y}; index) => {
+        ballElemnts[index].style.cssText = `left: ${x}px; top: ${y}px;`;
+    });
+
