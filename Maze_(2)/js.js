@@ -122,3 +122,47 @@ function main(timestamp) {
         ballElemnts[index].style.cssText = `left: ${x}px; top: ${y}px;`;
     });
 
+previousTimestamp = timestamp;
+
+    window.requestAnimationFrame(main);
+
+    balls.forEach((ball) => {
+        ball.velocityX = ball.velocityX + velocityChangeX;
+        ball.velocityY = ball.velocityY + velocityChangeY;
+
+        ball.nextX = ball.x + ball.velocityX;
+        ball.nextY = ball.y + ball.velocityY;
+
+        walls.forEach((wall) => {
+            of (wall.vertical) {
+                //Vertical wall
+                const wallStart = { x: wall.x, y: wall.y };
+                const wallEnd = { x: wall.x, y:wall.y + wall.length };
+
+                if(
+                    ball.nextX + ballSize / 2 > wall.x - wallw / 2 &&
+                    ball.nextX - ballSize / 2 < wall.x + wallW / 2
+                ) {
+                    // ...
+
+                    if (ball.nextY > wallStart.y && ball.nextY < wallEnd) {
+                        // The ball got inside the main body of the wall
+                        if (ball.nextX < wall.x) {
+                            // Hit vertical wall from left
+                            ball.nextX = wall.x - wallW / 2 - ballSize / 2;
+                        } else {
+                            // Hit verrtical wall from right
+                            ball.nextX = wall.x - wallW + wallW / 2 + ballSize / 2; 
+                        }
+                        ball.x = ball.nextX;
+                        ball.velocityX = -ball.velocityX / 3;
+                    }
+                }
+            } else {
+                // Horizontal wall
+                const wallStart = { x: wall.x, y: wall.y };
+                const wallEnd = { x: wall.x + wall.length, y: wall.y };
+
+                // . . . 
+            }
+        });
