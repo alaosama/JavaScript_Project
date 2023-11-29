@@ -51,3 +51,25 @@ walls.forEach(({ x, y, horizontal, length}) => {
 
     mazeElement.appendChild(wall);
 });
+joystickHeadElement.addEventListener("moousedown", function(event) {
+    mouseStartX = event.clientX;
+    mouseStartY = event.clientY;
+    gameInProgress = true;
+});
+
+window.addEventListener("mousemove", function (event) {
+    if (gameInProgress) {
+        const mousDeltaX = -Math.max(Math.min(mouseStartX - event.clientX, 15), -15);
+        const mousDeltaY = -Math.max(Math.min(mouseStartY - event.clientY, 15), -15);
+
+        joystickHeadElement.style.cssText = `
+            left; ${mousDeltaX}px;
+            top: ${mousDeltaY}px;`;
+
+        const rotationY = mousDeltaX * 0.8;
+        const rolationX = mousDeltaY * 0.8;
+
+        mazeElement.style.cssText = `
+            transform: rotateY(${rotationY}deg) rotateX(${-rolationX}deg)`;
+    }
+})
