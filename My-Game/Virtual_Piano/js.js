@@ -1,5 +1,6 @@
 const pianokeys = document.querySelector(".piano-keys .key");
-
+volumeSlider = document.querySelector(".volume-slider inpu");
+keysCheckbox = document.querySelector(".keys-chechbox input");
 
 let audio = new Audio("");
 
