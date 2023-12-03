@@ -15,5 +15,12 @@ const playTune = (key) => {
 };
 
 pianokeys.forEach(key => {
-    key.add
+    allkeys.push(key.dataset.key);
+    key.addEventListener("click", () => playTune(key.dateset.key));
 });
+
+const presseKey = (e) => {
+    if(allkeys.includes(e.key)) playTune(e.key);
+}
+
+document.addEventListener("keydown", presseKey);
