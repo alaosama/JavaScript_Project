@@ -32,3 +32,35 @@
 img {
     width: 100%v;
 }
+
+.circle {
+    width: 30%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square-common {
+    width: 70px;
+    height: 70px;
+}
+
+.color-dark{
+    background-color: #ff0101;
+}
+
+.color-light{
+    background-color: #020202;
+}
+
+.rank-style{
+    width: 560px;
+    height: 70px;
+    display: flex;
+}
