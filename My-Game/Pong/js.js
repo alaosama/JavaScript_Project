@@ -4,12 +4,22 @@ const ctx = canvas.getContext('2d');
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 
+let ballX = 200;
+let ballY = 200;
+let ballRadius = 50;
+let ballVelocityX = 2;
+let ballVelocityY = 2;
+
 function vec2(x, y) 
 {
     return {x: x, y: y};
-}
+};
 
-function Ball (pos, velocity, radius)
+
+const ball = new ball(vec2(200, 200), vec2(2, 2), 20);
+
+
+function ball (pos, velocity, radius)
 {
     this.pos = pos;
     this.velocity = velocity;
@@ -21,15 +31,13 @@ function Ball (pos, velocity, radius)
     };
 
     this.draw = function () {
+        ctx.beginPath();
+        ctx.arc(this.pos.x, this.pos.y, this.radius, 0, Math.PI * 2);
+        ctx.stroke();
+    };
 
     };
 }
-
-let ballX = 200;
-let ballY = 200;
-let ballRadius = 50;
-let ballVelocityX = 2;
-let ballVelocityY = 2;
 
 function gameUpdate() {
     
