@@ -127,16 +127,58 @@ function gameUpdate() {
     paddle1.update();
     paddleCollisionWinthTheEdges(paddle1);
     ballCollisionWinthTheEdges(ball);
+
+    // player2(ball, paddle2);
+    
     player2(ball, paddle2);
     ballPaddleCollision(ball, paddle1);
+
+    increaseScore(ball, paddle1, paddle2);
 }
 
 function gameDraw() {
 
-    ctx.beginPath();
-    ctx.art(ballX, ballY, 50, 0, Math.PI * 2);
-    ctx.stroke();
+    // ctx.beginPath();
+    // ctx.art(ballX, ballY, 50, 0, Math.PI * 2);
+    // ctx.stroke();
+    ball.draw();
+    paddle1.draw();
+    paddle2.draw();
 }
+
+
+function paddleCollisionWinthTheEdges (paddle) {
+    if (paddle.pos.y <= 0) {
+        
+        paddle.pos.y = 0;
+    }
+
+    if (paddle.pos.y + paddle.height >= canvas.height) {
+
+        paddle.pos.y = canvas.height - paddle.height;
+    }
+}
+
+
+function ballCollisionWinthTheEdges (ball) {
+    if (ball.pos.y + ball.radius >= canvas.height) {
+        ball.velocity.y *= -1;
+    }
+
+    if (ball.pos.y - ball.radius <= 0) {
+        ball.velocity.y *= -1;
+    }
+    
+    // if (ball.pos.x + ball.radius >= canvas.width) {
+    //     ball.velocity.x *= -1;
+    // }
+
+    // if (ball.pos.x + ball.radius >+ 0) {
+    //     ball.velocity.x *= -1;
+    // }
+    
+}
+
 
 function gameLoop() {
     
