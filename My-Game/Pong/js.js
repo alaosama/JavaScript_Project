@@ -123,8 +123,12 @@ function ballCollisionWinthTheEdges (ball) {
 
 function gameUpdate() {
     
-    ballX += ballVelocityX;
-    ballY += ballVelocityY;
+    ball.update();
+    paddle1.update();
+    paddleCollisionWinthTheEdges(paddle1);
+    ballCollisionWinthTheEdges(ball);
+    player2(ball, paddle2);
+    ballPaddleCollision(ball, paddle1);
 }
 
 function gameDraw() {
