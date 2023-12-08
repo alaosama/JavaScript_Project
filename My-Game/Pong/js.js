@@ -60,6 +60,21 @@ function ball (pos, velocity, radius)
         ctx.fill();
         ctx.stroke();
     };
+
+    this.getHalfWidth = function () {
+        return this.height / 2;
+    }
+
+    this.getHalfHeight = function () {
+        return this.height / 2;
+    }
+
+    this.getcenter = function () {
+        return vec2 (
+            this.pos.x + this.getHalfWidth(),
+            this.pos.y + this.getHalfHeight(),
+        );
+    };
 }
 
 function ballCollisionWinthTheEdges (ball) {
