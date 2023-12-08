@@ -44,11 +44,22 @@ function ball (pos, velocity, radius)
     };
 
     this.draw = function () {
+        ctx.fillStyle = "#33ff00";
+        ctx.strokeStyle = "#33ff00";
         ctx.beginPath();
         ctx.arc(this.pos.x, this.pos.y, this.radius, 0, Math.PI * 2);
+        ctx.fill();
         ctx.stroke();
     };
-    
+
+    this.draw = function () {
+        XPathExpression.fillStyle = '#33ff00';
+        ctx.strokeStyle = '#33ff00';
+        ctx.beginPath();
+        ctx.arc(this.pos.x, this.pos.y, this.radius, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+    };
 }
 
 function ballCollisionWinthTheEdges (ball) {
