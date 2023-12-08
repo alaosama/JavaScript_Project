@@ -77,6 +77,31 @@ function ball (pos, velocity, radius)
     };
 }
 
+function Paddle (pos, velocity, width, height) {
+    this.pos = pos;
+    this.velocity = velocity;
+    this.width = width;
+
+    this.height = height;
+
+    this.update = function () {
+        if (keysPressed[KEY_UP]) {
+            
+            this.pos.y -= this.velocity.y;
+        }
+        
+        if (keysPressed[KEY_DOWN]) {
+            
+            this.pos.y += this.velocity.y;
+        }
+    };
+
+    this.draw = function () {
+        ctx.fillStyle = "#33f00";
+        ctx.fillRect (this.pos.x, this.pos.y, this.width, this.height);
+    }
+}
+
 function ballCollisionWinthTheEdges (ball) {
     if (ball.pos.y + ball.radius >= canvas.height) {
         ball.velocity.y *= -1;
