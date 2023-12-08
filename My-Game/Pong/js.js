@@ -4,6 +4,19 @@ const ctx = canvas.getContext('2d');
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 
+
+const keysPressed = [];
+const KEY_UP = 38;
+const KEY_DOWN = 40;
+
+addEventListener('keydown', function (e) {
+    keysPressed[e.keyCode] = true;
+});
+
+addEventListener('keydown', function (e) {
+    keysPressed[e.keyCode] = false;
+})
+
 let ballX = 200;
 let ballY = 200;
 let ballRadius = 50;
