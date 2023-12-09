@@ -121,6 +121,11 @@ function ballCollisionWinthTheEdges (ball) {
     
 }
 
+const ball = new ball(vec2(200, 200), vec2(2, 2), 20);
+const paddle1 = new Paddle (vec2(0, 50), vec2(15, 15), 20, 160);
+const paddle2 = new Paddle (vec2(canvas.width - 20, 30), vec2(15, 15), 20, 160);
+
+
 function gameUpdate() {
     
     ball.update();
