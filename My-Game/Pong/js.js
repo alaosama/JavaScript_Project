@@ -121,6 +121,22 @@ function ballCollisionWinthTheEdges (ball) {
     
 }
 
+function increaseScore (ball, paddle1, paddle2) {
+    
+    if (ball.pos.x <= -ball.radius) {
+
+        paddle2.score += 1;
+        document.getElementById("player2Score").innerHTML = paddle2.score;
+        respawnBall(ball);
+    }
+
+    if (ball.pos.x >= canvas.width + ball.radius) {
+
+        paddle1.score += 1;
+        document.getElementById("player1Score").innerHTML = paddle1.score
+    }
+}
+
 const ball = new ball(vec2(200, 200), vec2(2, 2), 20);
 const paddle1 = new Paddle (vec2(0, 50), vec2(15, 15), 20, 160);
 const paddle2 = new Paddle (vec2(canvas.width - 20, 30), vec2(15, 15), 20, 160);
