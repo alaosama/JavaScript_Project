@@ -141,6 +141,38 @@ const ball = new ball(vec2(200, 200), vec2(2, 2), 20);
 const paddle1 = new Paddle (vec2(0, 50), vec2(15, 15), 20, 160);
 const paddle2 = new Paddle (vec2(canvas.width - 20, 30), vec2(15, 15), 20, 160);
 
+function drawGameScene() {
+
+    ctx.strokeStyle= '#ffff00';
+
+    ctx.beginPath();
+    ctx.lineWidth = 20;
+    ctx.moveTo(0, 0);
+    ctx.lineTo(canvas.width, 0);
+    ctx.stroke();
+
+    ctx.lineWidth = 15;
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(0, canvas.height);
+    ctx.stroke();
+
+    ctx.lineWidth = 15;
+    ctx.beginPath();
+    ctx.moveTo(canvas.height, 0);
+    ctx.lineTo(canvas.width, canvas.height);
+    ctx.stroke();
+
+    ctx.lineWidth = 10;
+    ctx.beginPath();
+    ctx.moveTo(canvas.width / 2, 0);
+    ctx.lineTo(canvas.width / 2, canvas.height);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(canvas.width / 2, canvas.height / 2, 50, 0, Math.PI * 2);
+
+}
 
 function gameUpdate() {
     
