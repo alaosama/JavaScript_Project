@@ -143,3 +143,36 @@ body {
 .logo img {
     height: 100%;
 }
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 10px;
+    width: 150px;
+    height: 100%;
+    line-height: 1;
+}
+
+.score__title {
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    color: var(--score-text);
+}
+
+.score__nomber {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--dark-text);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(288, 45%, 44%);
+}
