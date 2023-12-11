@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -110,4 +110,36 @@ body {
     font-size: 1.235rem;
     margin-top: 1rem;
     pointer-events: none;
+} */
+
+
+import url();
+
+
+body {
+    font-family: "Barlow Semi Condesed", sans-serif;
+    background-color: radial-gradiel;
+    min-height: 100vh;
+    text-transform: uppercase;
+}
+
+.container {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    border: 3px solid var(--outline);
+    border-radius: 20px;
+    padding: 1rem 1.4rem 1rem 2rem;
+}
+
+.logo img {
+    height: 100%;
 }
