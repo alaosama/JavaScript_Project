@@ -88,6 +88,33 @@ body {
     color: var(--dark-text);
 }
 
+.choice-btn {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.choice {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    background: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.choice-btn[data-choice ="paper"] {
+    grid-area: paper;
+}
+.choice-btn[data-choice ="scissors"] {
+    grid-area: scissors;
+}
+.choice-btn[data-choice ="rock"] {
+    grid-area: rock;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
