@@ -105,6 +105,32 @@ body {
     place-items: center;
 }
 
+.choice::before, .choice::after {
+    content: "";
+    position: absolute;
+    left: -15%;
+    top: -15%;
+    width: 130%;
+    height: 130%;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.choice::after {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.choice-btn:focus .choice::after {
+    opacity: 1;
+    box-shadow: 0 0 0 2rem #223351;
+    z-index: -2;
+}
+
+.choice img {
+    transform: scale(1.5);
+}
+
 .choice-btn[data-choice ="paper"] {
     grid-area: paper;
 }
