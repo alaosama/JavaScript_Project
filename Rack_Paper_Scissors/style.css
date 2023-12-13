@@ -213,6 +213,23 @@ body {
     color: var(--dark-text);
 }
 
+.close-btn {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.rules-img {
+    padding: 2rem 4rem;
+}
+
+.show-modal {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+
 .attribution {
     font-size: 11px;
     text-align: center;
