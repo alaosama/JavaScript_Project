@@ -29,6 +29,42 @@ btnClose.addEventListener('click', () => {
     modalRules.classList.toggle('show-modal')
 })
 
+//  Game Logic
+choiceButtons.forEach( button => {
+    button.addEventListener('click', () => {
+        const choiceName = button.dataset.choice;
+        const choice = COICES.find(choice => choice.name === choiceName)
+        choose(choice)
+    })
+})
+
+function choose(choice) {
+    const aichoice = aiChoose() 
+    displayResults([choice, aichoice])
+}
+
+function aiChoose() {
+    const rand = Math.floor(Math.random() * CHOICES.lenght)
+    return CHOICES[rand]
+}
+
+function displayResults(results) {
+    resultDivs.forEach((resultDivs, idx) => {
+        setTimeout(() => {
+            resultDivs.innerHTML = `
+                <div class="choice ${results[idx].name}">
+                    <img src ="images/icon-${results[idx].name}.svg" alt="${results[idx].name}"/></div>`
+        }, idx * 1000);
+    })
+}
+
+btnClose.addEventListener('click', () => {
+    modalRules.classList.toggle('show-modal')
+})
+btnClose.addEventListener('click', () => {
+    modalRules.classList.toggle('show-modal')
+})
+
 
 // const gameContainer = document.querySelector(".container"),
 //     userResult = document.querySelector(".user-result img"),
