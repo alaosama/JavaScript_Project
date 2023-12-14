@@ -157,6 +157,26 @@ body {
     grid-area: rock;
 }
 
+/* Results */
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    grid-template-areas: "you-title ai-titlr"
+                          "you-picked ai-picked";
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.results__heading:first-of-type {
+    grid-area: you-title;
+}
+
+.results__heading:first-of-type {
+    grid-area: ai-title;
+}
+
 /* Rules Button */
 
 .rules-btn {
