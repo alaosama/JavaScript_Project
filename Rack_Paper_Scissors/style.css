@@ -200,6 +200,29 @@ body {
     border: 2px solid #fff;
 }
 
+/* Rules Button */
+
+.rules-btn {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: none;
+    outline: none;
+    border: 2px solid var(--outline);
+    border-radius: 0.6rem;
+    font-family: inherit;
+    color: var(--light-text);
+    padding: 0.6rem 2.5rem;
+    text-transform: inherit;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+}
+
+.rules-btn:focus {
+    border: 2px solid #fff;
+}
+
 /* Rules Modal */
 
 .modal {
