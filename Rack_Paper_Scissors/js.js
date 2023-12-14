@@ -2,6 +2,21 @@ setTimeout(() => {
     document.body.classList.remove('preload');
 }, 500);
 
+const COICES = [
+    {
+        name: "pzper",
+        beats: "rock"
+    },
+    {
+        name: "scissors",
+        beats: "paper"
+    },
+    {
+        name: "rock",
+        beats: "scissors"
+    },
+]
+
 // DOM
 const btnRules = document.querySelector('.rules-btn');
 const btnClose = document.querySelector('.close-btn');
