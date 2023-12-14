@@ -1,3 +1,20 @@
+setTimeout(() => {
+    document.body.classList.remove('preload');
+}, 500);
+
+// DOM
+const btnRules = document.querySelector('.rules-btn');
+const btnClose = document.querySelector('.close-btn');
+const modalRules = document.querySelector('.modal');
+
+btnClose.addEventListener('click', () => {
+    modalRules.classList.toggle('show-modal')
+})
+btnClose.addEventListener('click', () => {
+    modalRules.classList.toggle('show-modal')
+})
+
+
 // const gameContainer = document.querySelector(".container"),
 //     userResult = document.querySelector(".user-result img"),
 //     cpuResult = document.querySelector(".user-result img"),
@@ -127,16 +144,3 @@
 //     }
 //     resultDisplay.innerHTML=result
 // }
-
-
-// DOM
-const btnRules = document.querySelector('.rules-btn');
-const btnClose = document.querySelector('.close-btn');
-const modalRules = document.querySelector('.modal');
-
-btnClose.addEventListener('click', () => {
-    modalRules.classList.toggle('show-modal')
-})
-btnClose.addEventListener('click', () => {
-    modalRules.classList.toggle('show-modal')
-})
