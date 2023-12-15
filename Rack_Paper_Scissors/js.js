@@ -80,6 +80,13 @@ playAgainBtn.addEventListener("click", () => {
     resultsDiv.classList.toggle("show-winner");
 });
 
+    // Show/Hide Rules
+btnRules.addEventListener("click", () => {
+    modalRules.classList.toggle("show-modal");
+});
+btnClose.addEventListener("click", () => {
+    modalRules.classList.toggle("show-modal");
+});
 
 // const gameContainer = document.querySelector(".container"),
 //     userResult = document.querySelector(".user-result img"),
