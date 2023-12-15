@@ -290,3 +290,13 @@ body {
 .attribution a {
     color: hsl(288, 45%, 44%);
 }
+
+/* Utilities */
+.preload * {
+    transition: none;
+}
+  
+    .hidden {
+    display: none;
+}
+
