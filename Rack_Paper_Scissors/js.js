@@ -65,6 +65,21 @@ btnClose.addEventListener('click', () => {
     modalRules.classList.toggle('show-modal')
 })
 
+// Play Again
+playAgainBtn.addEventListener("click", () => {
+    gameDiv.classList.toggle("hidden");
+    resultsDiv.classList.toggle("hidden");
+    
+    resultDivs.forEach((resultDiv) => {
+    resultDiv.innerHTML = "";
+    resultDiv.classList.remove("winner");
+    });
+    
+    resultText.innerText = "";
+    resultWinner.classList.toggle("hidden");
+    resultsDiv.classList.toggle("show-winner");
+});
+
 
 // const gameContainer = document.querySelector(".container"),
 //     userResult = document.querySelector(".user-result img"),
