@@ -44,6 +44,11 @@ h2 {
     font-weight: 600;
 }
 
+.reset:focus {
+    color: #fff;
+    background: #267c65;
+}
+
 .game {
     width: 430px;
     height: 430px;
