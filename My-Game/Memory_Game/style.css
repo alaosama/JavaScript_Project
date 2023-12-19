@@ -65,3 +65,20 @@ h2 {
     background: #fff;
     transition: 0.25s;
 }
+
+.item.boxOpen {
+    transform: rotate(0deg);
+}
+
+.item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #209d7b;
+    transition: 0.25s;
+    transform: rotate(0deg);
+}
+
+.boxMatch::after , .boxOpen::after{
+    transform: rotate(180deg);
+}
