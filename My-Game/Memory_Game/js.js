@@ -22,6 +22,12 @@ function shuffle() {
 
 // Check for a match
 
+function checkForMatch() {
+    let isMatch = firstCard.dataset.image === secondCard.dataset.image;
+    isMatch ? disableCards() : unflipCards();
+}
+
+
 // Disable matched cards
 
 // Unflip non-matched cards
