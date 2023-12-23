@@ -1,5 +1,11 @@
 // Game Variables
 
+let cards = document.querySelector(".card");
+let cardArray = [...cards];
+let flipppedCard = false;
+let lockCard = false;
+let firstCard, secondCard;
+
 // Shuffle the cards
 
 // Flip a card
