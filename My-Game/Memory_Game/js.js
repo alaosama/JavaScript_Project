@@ -20,6 +20,19 @@ function shuffle() {
 
 // Flip a card
 
+function flipCard() {
+    if (lockCard) return;
+    if (this === firstCard) return;
+  
+    this.classList.add("flip");
+  
+    if (!flippedCard) {
+        flippedCard = true;
+        firstCard = this;
+        return;
+    }
+}
+
 // Check for a match
 
 function checkForMatch() {
