@@ -8,6 +8,16 @@ let firstCard, secondCard;
 
 // Shuffle the cards
 
+function shuffle() {
+    cardArray.forEach((card) => {
+        let randomIndex = Math.floor(Math.random() * cardArray.length);
+        card.style.order = randomIndex;
+        card.children[1].style.backgroundImage = `url(${card.getAttribute(
+            "data-image"
+        )})`;
+    });
+}
+
 // Flip a card
 
 // Check for a match
