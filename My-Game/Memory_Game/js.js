@@ -48,3 +48,10 @@ function checkForMatch() {
 // Reset the game boord
 
 // Start the game
+
+function startGame() {
+    //
+    cards.forEach((card) => card.addEventListener("click", flipCard));
+}
+  
+startGame();
