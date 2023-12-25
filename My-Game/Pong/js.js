@@ -4,6 +4,16 @@ const ctx = canvas.getContext('2d');
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 
+// ctx.fillStyle = "#ff0000";
+// ctx.fillRect(100, 100, 50, 50);
+
+// ctx.fillStyle = "#ff00ff";
+// ctx.strokeStyle = "#ff00ff";
+// ctx.beginPath();
+// ctx.arc(200, 200, 50, 0, Math.PI * 2);
+// ctx.fill();
+// ctx.stroke();
+
 
 const keysPressed = [];
 const KEY_UP = 38;
