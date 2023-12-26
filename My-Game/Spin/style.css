@@ -1,1 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ecf0f1; /* Ajout d'une couleur de fond */
+}
+
+.wheel-container {
+    text-align: center;
+}
+
+.wheel {
+    width: 300px;
+    height: 300px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 3s ease-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Ajout d'une ombre */
+}
+
+.option {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #fff;
+    transform-origin: 50% 100%;
+    pointer-events: none;
+    border-bottom: 2px solid #2c3e50; /* Ajout d'une bordure pour chaque option */
+}
+
+.option:nth-child(even) {
+    background-color: #2980b9; /* Changement de couleur pour les options paires */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #2ecc71; /* Changement de couleur du bouton */
+    color: #fff; /* Changement de couleur du texte du bouton */
+    border: none;
+    border-radius: 4px;
+}
 
