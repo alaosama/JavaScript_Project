@@ -1,54 +1,58 @@
 body {
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #ecf0f1; /* Ajout d'une couleur de fond */
+    background-color: #282c35;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
 }
 
-.wheel-container {
+.container {
     text-align: center;
 }
 
 .wheel {
     width: 300px;
     height: 300px;
-    background-color: #3498db;
     border-radius: 50%;
+    background-color: #ffcc00;
     position: relative;
+    margin: 20px auto;
     overflow: hidden;
-    transition: transform 3s ease-out;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Ajout d'une ombre */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.option {
+.choice {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2em;
-    color: #fff;
-    transform-origin: 50% 100%;
-    pointer-events: none;
-    border-bottom: 2px solid #2c3e50; /* Ajout d'une bordure pour chaque option */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 60px 0;
+    border-color: #007bff transparent transparent transparent;
+    transform-origin: center center; /* Modification de l'origine de la transformation */
+    transform: translateX(-50%) translateY(-50%) rotate(var(--rotation)); /* Ajout du décalage vertical */
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.2;
 }
 
-.option:nth-child(even) {
-    background-color: #2980b9; /* Changement de couleur pour les options paires */
+.choice:nth-child(even) {
+    border-color: #ff4500 transparent transparent transparent;
 }
 
 button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1em;
+    padding: 15px 30px;
+    font-size: 20px;
     cursor: pointer;
-    background-color: #2ecc71; /* Changement de couleur du bouton */
-    color: #fff; /* Changement de couleur du texte du bouton */
+    background-color: #4caf50;
+    color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
+button:hover {
+    background-color: #45a049;
+}
