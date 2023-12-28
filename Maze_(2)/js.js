@@ -31,3 +31,16 @@ function changeBrightness(factor, sprite) {
     virtCanvas.remove();
     return spriteOutput;
 }
+
+function displayVictoryMess(moves) {
+    document.getElementsByT("moves").innerHTML = "You Moved" + moves + "Steps.";
+    toggleVisablity("Message-Container");
+}
+
+function toggleVisablity(id) {
+    if (document.getElementById(id).style.visibility == "visible") {
+        document.getElementById(id).style.visibility = "hidden";
+    } else {
+        document.getElementById(id).style.visibility = "visible";
+    }
+}
