@@ -97,3 +97,34 @@ input:focus, select:focus {
     margin-left: -150px;
     margin-top: -150px;
 }
+
+#page {
+    text-align: center;
+    height: auto;
+    width: auto;
+    margin: auto;
+}
+
+#page #menu {
+    margin: auto;
+    padding: 10px;
+    height: 65px;
+    box-sizing: border-box;
+}
+
+#page #menu h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 3.2rem;
+}
+
+#page #view {
+    position: absolute;
+    top: 65px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+}
