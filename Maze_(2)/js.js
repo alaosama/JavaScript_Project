@@ -168,6 +168,11 @@ function drawEndSprite() {
 }
             
 
+function clear () {
+    var canvasSize = cellSize * map.length;
+    ctx.clearRect(0, 0, canvasSize, canvasSize);
+}
+            
 function DrawMaze(Maze, ctx, endSprite = null) {
     var map = Maze.map();
     var cellSize = cellsize;
