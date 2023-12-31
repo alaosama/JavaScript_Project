@@ -149,6 +149,16 @@ function Maze(Width, Height) {
                 }
             }
 
+            if (!move) {
+                // If it failed to find direction
+                // move the current position back to the prior cell and Recall the method
+                pos = mazeMap[pos.x][pos.y].priorPos;
+            }
+            if (numCells == cellsVisited) {
+                isComp = true;
+            }
+        }
+    }
 
 function drawEndSprite() {
     var offsetLeft = cellSize / 50;
