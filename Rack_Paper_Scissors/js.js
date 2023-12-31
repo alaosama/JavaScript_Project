@@ -17,7 +17,7 @@ const COICES = [
     },
 ]
 
-// DOM
+        // DOM
 const btnRules = document.querySelector('.rules-btn');
 const btnClose = document.querySelector('.close-btn');
 const modalRules = document.querySelector('.modal');
@@ -29,7 +29,7 @@ btnClose.addEventListener('click', () => {
     modalRules.classList.toggle('show-modal')
 })
 
-//  Game Logic
+        //  Game Logic
 choiceButtons.forEach( button => {
     button.addEventListener('click', () => {
         const choiceName = button.dataset.choice;
@@ -65,7 +65,7 @@ btnClose.addEventListener('click', () => {
     modalRules.classList.toggle('show-modal')
 })
 
-// Play Again
+        // Play Again
 playAgainBtn.addEventListener("click", () => {
     gameDiv.classList.toggle("hidden");
     resultsDiv.classList.toggle("hidden");
