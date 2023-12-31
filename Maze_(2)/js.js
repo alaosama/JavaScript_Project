@@ -243,6 +243,45 @@ if (endSprite != null) {
     drawEndMethod();    
 }
 
+
+function Player(maze, c, _cellsize, onComplete, sprite = null) {
+    var ctx = c.getContext("2d");
+    var drawSprite;
+    var moves = 0;
+    drawSprite = drawSpriteCircle;
+    if (sprite != null) {
+        drawSprite = drawSpriteImg;
+    }
+    var player = this;
+    var map = maze.map();
+    var cellCoords = {
+        x: maze.startCoord().x,
+        y: maze.startCoord().y
+    };
+    var cellSize = _cellsize;
+    var halfCellSize = cellSize / 2;
+
+    this.redrawPlayer = function(_cellsize) {
+        cellSize = _cellsize;
+        drawSpriteImg(cellCoords);
+
+        function drawSpriteCircle(coord) {
+            ctx.beginPath();
+            ctx.fillStyle = "yellow";
+            ctx.arc (
+                (coord.x * 1) * cellSize - halfCellSize,
+                (coord.y + 1) * cellSize - halfCellSize,
+                halfCellSize - 2,
+                0,
+                2 * Math.PI
+            );
+            ctx.fill();
+            if (coord.x === maze.endCoord().x && coord.y === maze.endCoord().y) {
+                onComplete(moves);
+                player.unbindKeyDown();
+            }
+        }
+
             
 function DrawMaze(Maze, ctx, endSprite = null) {
     var map = Maze.map();
