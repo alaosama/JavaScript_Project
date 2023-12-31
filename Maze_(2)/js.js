@@ -160,6 +160,56 @@ function Maze(Width, Height) {
         }
     }
 
+    function defineStartEnd() {
+        switch (rand(4)) {
+            case 0:
+                startCoord = {
+                    x: 0,
+                    y: 0
+                };
+                endCoord = {
+                    x: height -1,
+                    y: width -1
+                };
+                break;
+            case 1:
+                startCoord = {
+                    x: 0,
+                    y: width - 1
+                };
+                endCoord = {
+                    x: height - 1,
+                    y: 0 
+                }
+                break
+            case 2:
+                startCoord = {
+                    x: height - 1,
+                    y: 0
+                };
+                endCoord = {
+                    x: 0,
+                    y: width - 1 
+                }
+                break
+            case 3:
+                startCoord = {
+                    x: height - 1,
+                    y: width - 1
+                };
+                endCoord = {
+                    x: 0,
+                    y: 0 
+                }
+                break
+        }
+    }
+
+    genMap();
+    defineStartEnd();
+    defineMaze();
+}
+
 function drawEndSprite() {
     var offsetLeft = cellSize / 50;
     var offsetRight = cellSize / 25;
