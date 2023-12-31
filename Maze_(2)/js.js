@@ -232,6 +232,17 @@ function clear () {
     var canvasSize = cellSize * map.length;
     ctx.clearRect(0, 0, canvasSize, canvasSize);
 }
+
+if (endSprite != null) {
+    drawEndMethod = drawEndSprite;
+} else {
+    drawEndMethod = drawEndFlag;
+
+    clear();
+    DrawMap();
+    drawEndMethod();    
+}
+
             
 function DrawMaze(Maze, ctx, endSprite = null) {
     var map = Maze.map();
