@@ -270,6 +270,15 @@ function DrawMaze(Maze, ctx, endSprite = null) {
         }
     }
 
+    
+    function DrawMap () {
+        for (x = 0; x < map.length; x++) {
+            for (y = 0; y < map[x].length; y++) {
+                drawCell(x, y, map[x][y]);
+            }
+        }
+    }
+
 
 function drawEndSprite() {
     var offsetLeft = cellSize / 50;
