@@ -226,6 +226,19 @@ function drawEndSprite() {
         cellSize - offsetRight
     );
 }
+
+function DrawMaze(Maze, ctx, endSprite = null) {
+    var map = Maze.map();
+    var cellSize = cellsize;
+    var drawEndMethod;
+    ctx.lineWidth = cellSize / 40;
+
+    this.redrawMaze = function(size) {
+        cellSize = sier;
+        ctx.lineWidth = cellSize / 50;
+        DrawMap(),
+        drawEndMethod();
+    };
             
 
 function clear () {
