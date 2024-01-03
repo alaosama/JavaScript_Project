@@ -1,4 +1,3 @@
-
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -48,7 +47,7 @@ function Ball (pos, velocity, redius) {
     
 }
 
-const Ball = new Ball();
+const ball = new ball(vec2(200, 200), vec2(2, 2), 20);
 
 function gameUpdate() {
 
@@ -75,6 +74,7 @@ function gameLoop() {
 }
 
 gameLoop();
+
 
 
 // const canvas = document.getElementById('canvas');
