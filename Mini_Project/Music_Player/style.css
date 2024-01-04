@@ -77,6 +77,14 @@ progress-bar {
     font-size: 35px;
 }
 
+#sontTitle {
+    font-weight: 600;
+}
+
+#songArtst {
+    color: rgb(214, 214, 214);
+    ma
+
 
 .playerButton {
     width: 70%;
