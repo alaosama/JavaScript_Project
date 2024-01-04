@@ -69,3 +69,30 @@ progress-bar {
 #audioPlayer {
     display: none;
 }
+
+.playStopIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+
+.playerButton {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.playerButton button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
