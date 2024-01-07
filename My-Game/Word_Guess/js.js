@@ -34,6 +34,27 @@ function generateInput() {
         inputsContainer.appendChild(tryDiv);
     }
 
+    // Focus On First Input In First Try Element 
+    inputsContainer.children[0].children[1].focus();
+
+    // Disable All Inputs Except First One
+    const inputsInDisableDiv = document.querySelectorAll(".disabled-input input");
+    inputsInDisableDiv.forEach((input) => (input.disabled = true));
+
+    const inputs = document.querySelectorAll("input");
+    inputs.forEach((input) => {
+
+        // Convert Input To Uppercase
+        input.addEventListener("input", function () {
+            this.value = this.value.toUpperCase();
+
+            // Console.log(index);
+            const nextInput = 
+        })
+    })
+
+}
+
 window.onload = function () {
     generateInput();
 }
