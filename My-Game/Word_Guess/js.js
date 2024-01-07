@@ -5,3 +5,10 @@ document.querySelector("footer").innerHTML = `${gameName} Game Created By Elzero
 let numberOfTries = 6;
 let numberOfLetters = 6;
 let currentTry = 1;
+
+
+
+
+window.onload = function () {
+    generateInput();
+}
