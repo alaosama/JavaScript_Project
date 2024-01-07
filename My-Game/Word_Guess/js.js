@@ -52,10 +52,24 @@ function generateInput() {
             const nextInput = inputs[index + 1];
             if (nextInput) nextInput.focus();
         });
-        })
-    })
 
+            input.addEventListener("keydown", function (event) {
+            // console.log(event);
+            const currentIndex = Array.from(inputs).indexOf(event.target); // Or this
+            // console.log(currentIndex);
+
+            if (event.key === "ArrowRight") {
+                const nextInput = currentIndex + 1;
+                if (nextInput < input.length) inputs [nextInput].focus();
+            }
+            if (event.key === "ArrowLeft") {
+                const prevInput = currentIndex + 1;
+                if (prevInput >= 0) inputs[prevInput].focus();
+            }
+        });
+    });
 }
+
 
 window.onload = function () {
     generateInput();
