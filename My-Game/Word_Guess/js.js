@@ -49,7 +49,9 @@ function generateInput() {
             this.value = this.value.toUpperCase();
 
             // Console.log(index);
-            const nextInput = 
+            const nextInput = inputs[index + 1];
+            if (nextInput) nextInput.focus();
+        });
         })
     })
 
