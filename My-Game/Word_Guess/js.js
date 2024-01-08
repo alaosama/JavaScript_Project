@@ -6,6 +6,11 @@ let numberOfTries = 6;
 let numberOfLetters = 6;
 let currentTry = 1;
 
+let wordToGuess = "";
+const words = ["Create", "Update", "Delete", "Master", "Branch", "Mainly", "Zakaria", "Osama"];
+wordToGuess = words[Math.floor(Math.random() * words.len)].toLowerCase();
+
+// console.log(wordToGuess);
 
 function generateInput() {
     const inputsContainer = document.querySelector(".inputs");
