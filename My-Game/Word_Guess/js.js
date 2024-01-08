@@ -75,6 +75,8 @@ function generateInput() {
     });
 }
 
+const guessButton = document.querySelector("check");
+guessButton.addEventListener("click", handlenGuess);
 
 window.onload = function () {
     generateInput();
