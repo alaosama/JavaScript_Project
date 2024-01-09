@@ -2,6 +2,7 @@ const letters = "abcdefghijklmnopqrstuvwxyz";
 
 let lettersArray = Array.from(letters);
 
+let lettersContainer = document.querySelector(".letters");
 
 const words = {
   programming: ["php", "javascript", "go", "scala", "fortran", "r", "mysql", "python"],
