@@ -29,3 +29,18 @@ const words = {
 let randomPropName = allKeys[randomPropNumber];
 
 let randomPropValue = words[randomPropName];
+
+
+lettersAndSpace.forEach(letter => {
+
+  let emptySpan = document.createElement("span");
+  
+  if (letter === ' ') {
+  
+    emptySpan.className = 'with-space';
+  
+  }
+  
+  lettersGuessContainer.appendChild(emptySpan);
+
+});
