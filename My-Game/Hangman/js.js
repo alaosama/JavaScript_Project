@@ -44,3 +44,20 @@ lettersAndSpace.forEach(letter => {
   lettersGuessContainer.appendChild(emptySpan);
 
 });
+
+
+
+
+function endGame() {
+
+  let div = document.createElement("div");
+
+  let divText = document.createTextNode(`Game Over, The Word Is ${randomValueValue}`);
+
+  div.appendChild(divText);
+
+  div.className = 'popup';
+
+  document.body.appendChild(div);
+
+}
