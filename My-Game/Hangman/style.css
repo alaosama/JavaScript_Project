@@ -30,3 +30,16 @@ hr {
   color: #E91E63;
   font-weight: bold;
 }
+
+.popup {
+  position: fixed;
+  background-color: #009688;
+  padding: 100px 20px;
+  width: 80%;
+  top: 10%;
+  left: 10%;
+  text-align: center;
+  font-size: 40px;
+  border: 1px solid #CCC;
+  color: #FFF;
+}
