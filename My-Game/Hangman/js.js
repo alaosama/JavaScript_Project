@@ -23,4 +23,9 @@ const words = {
   movies: ["Prestige", "Inception", "Parasite", "Interstellar", "Whiplash", "Memento", "Coco", "Up"],
   people: ["Albert Einstein", "Hitchcock", "Alexander", "Cleopatra", "Mahatma Ghandi"],
   countries: ["Syria", "Palestine", "Yemen", "Egypt", "Bahrain", "Qatar"]
-}
+};
+
+
+let randomPropName = allKeys[randomPropNumber];
+
+let randomPropValue = words[randomPropName];
