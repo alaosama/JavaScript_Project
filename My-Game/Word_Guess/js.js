@@ -82,6 +82,11 @@ function generateInput() {
     }
 
 
+
+guessButton.disabled = true;
+getHintButton.disabled = true;
+messageArea.innerHTML = `You Lose The Word Is <span>${wordToGuess}</span>`;
+
 function handleBackspace(event) {
   if (event.key === "Backspace") {
     const inputs = document.querySelectorAll("input:not([disabled])");
