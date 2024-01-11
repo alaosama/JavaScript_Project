@@ -81,3 +81,21 @@ guessButton.addEventListener("click", handlenGuess);
 window.onload = function () {
     generateInput();
 }
+
+
+
+
+function handleBackspace(event) {
+  if (event.key === "Backspace") {
+    const inputs = document.querySelectorAll("input:not([disabled])");
+    const currentIndex = Array.from(inputs).indexOf(document.activeElement);
+    // console.log(currentIndex);
+    if (currentIndex > 0) {
+      const currentInput = inputs[currentIndex];
+      const prevInput = inputs[currentIndex - 1];
+      currentInput.value = "";
+      prevInput.value = "";
+      prevInput.focus();
+    }
+  }
+}
