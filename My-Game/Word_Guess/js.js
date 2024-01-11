@@ -75,26 +75,11 @@ function generateInput() {
     });
 }
 
-function generateInput() {
-  const inputsContainer = document.querySelector(".inputs");
-
-  for (let i = 1; i <= numbersOfTries; i++) {
-    const tryDiv = document.createElement("div");
-    tryDiv.classList.add(`try-${i}`);
-    tryDiv.innerHTML = `<span>Try ${i}</span>`;
-
-    if (i !== 1) tryDiv.classList.add("disabled-inputs");
-
-
-
-const guessButton = document.querySelector("check");
-guessButton.addEventListener("click", handlenGuess);
-
-window.onload = function () {
-    generateInput();
-}
-
-
+  if (successGuess) {
+    messageArea.innerHTML = `You Win The Word Is <span>${wordToGuess}</span>`;
+    if (numberOfHints === 2) {
+      messageArea.innerHTML = `<p>Congratz You Didn't Use Hints</p>`;
+    }
 
 
 function handleBackspace(event) {
@@ -111,6 +96,8 @@ function handleBackspace(event) {
     }
   }
 }
+
+
 
 document.addEventListener("keydown", handleBackspace);
 
