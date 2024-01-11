@@ -99,3 +99,9 @@ function handleBackspace(event) {
     }
   }
 }
+
+document.addEventListener("keydown", handleBackspace);
+
+window.onload = function () {
+  generateInput();
+};
