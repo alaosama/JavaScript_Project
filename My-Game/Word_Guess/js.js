@@ -75,6 +75,18 @@ function generateInput() {
     });
 }
 
+function generateInput() {
+  const inputsContainer = document.querySelector(".inputs");
+
+  for (let i = 1; i <= numbersOfTries; i++) {
+    const tryDiv = document.createElement("div");
+    tryDiv.classList.add(`try-${i}`);
+    tryDiv.innerHTML = `<span>Try ${i}</span>`;
+
+    if (i !== 1) tryDiv.classList.add("disabled-inputs");
+
+
+
 const guessButton = document.querySelector("check");
 guessButton.addEventListener("click", handlenGuess);
 
