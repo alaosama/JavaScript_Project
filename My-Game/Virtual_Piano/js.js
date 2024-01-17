@@ -21,6 +21,15 @@ pianokeys.forEach(key => {
     key.addEventListener("click", () => playTune(key.dateset.key));
 });
 
+pianokeys.forEach(key => {
+    allkeys.push(key.dataset.key);
+    key.addEventListener("click", () => playTune(key.dateset.key));
+});
+
+const showHideKeys = (e) => {
+    pianokeys.forEach(key => key.classList.toggle("hide"));
+}
+
 const presseKey = (e) => {
     if(allkeys.includes(e.key)) playTune(e.key);
 }
