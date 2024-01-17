@@ -3,6 +3,7 @@ volumeSlider = document.querySelector(".volume-slider inpu");
 keysCheckbox = document.querySelector(".keys-chechbox input");
 
 let audio = new Audio("");
+audio = new Audio("");
 
 const playTune = (key) => {
     audio.src = `${key}`;
