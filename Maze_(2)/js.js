@@ -37,13 +37,13 @@ function displayVictoryMess(moves) {
     toggleVisablity("Message-Container");
 }
 
-function toggleVisablity(id) {
-    if (document.getElementById(id).style.visibility == "visible") {
-        document.getElementById(id).style.visibility = "hidden";
-    } else {
-        document.getElementById(id).style.visibility = "visible";
-    }
-}
+// function toggleVisablity(id) {
+//     if (document.getElementById(id).style.visibility == "visible") {
+//         document.getElementById(id).style.visibility = "hidden";
+//     } else {
+//         document.getElementById(id).style.visibility = "visible";
+//     }
+// }
 
 
 function Maze(Width, Height) {
