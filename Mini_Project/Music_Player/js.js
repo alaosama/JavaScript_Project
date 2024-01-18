@@ -9,8 +9,8 @@ const songImg = docu.querySelector('songImg');
 const backgroundBlor = document.querySelector('.backgroundBlur');
 
 
-// const audioFiles = [
-//     {title: 'Lawrence', artist: 'TrackTribe', img: 'image....', File: ''},
-//     {title: 'Inconsciousness', artist: 'Mini Vandals', img: ''},
-//     {title: 'Bonne Rap Flick', artist: 'Quinces Moreirn', img: ''}
-// ]
+const audioFiles = [
+    {title: 'Lawrence', artist: 'TrackTribe', img: 'image....', File: ''},
+    {title: 'Inconsciousness', artist: 'Mini Vandals', img: ''},
+    {title: 'Bonne Rap Flick', artist: 'Quinces Moreirn', img: ''}
+]
