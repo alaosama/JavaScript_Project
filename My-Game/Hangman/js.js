@@ -25,11 +25,23 @@ const words = {
   countries: ["Syria", "Palestine", "Yemen", "Egypt", "Bahrain", "Qatar"]
 };
 
+let allKeys = Object.keys(words);
+
+let randomPropNumber = Math.floor(Math.random() * allKeys.length);
 
 let randomPropName = allKeys[randomPropNumber];
 
 let randomPropValue = words[randomPropName];
 
+let randomValueNumber = Math.floor(Math.random() * randomPropValue.length);
+
+let randomValueValue = randomPropValue[randomValueNumber];
+
+document.querySelector(".game-info .category span").innerHTML = randomPropName;
+
+let lettersGuessContainer = document.querySelector(".letters-guess");
+
+let lettersAndSpace = Array.from(randomValueValue);
 
 lettersAndSpace.forEach(letter => {
 
