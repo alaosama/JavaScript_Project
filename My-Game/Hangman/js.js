@@ -58,43 +58,22 @@ let wrongAttempts = 0;
 
 let theDraw = document.querySelector(".hangman-draw");
 
-// Handle Clicking On Letters
 document.addEventListener("click", (e) => {
-
-  // Set The Choose Status
   let theStatus = false;
-
   if (e.target.className === 'letter-box') {
-
     e.target.classList.add("clicked");
-
-    // Get Clicked Letter
     let theClickedLetter = e.target.innerHTML.toLowerCase();
-
-    // The Chosen Word
     let theChosenWord = Array.from(randomValueValue.toLowerCase());
 
     theChosenWord.forEach((wordLetter, WordIndex) => {
-
-      // If The Clicked Letter Equal To One Of The Chosen Word Letter
       if (theClickedLetter == wordLetter) {
-
-        // Set Status To Correct
         theStatus = true;
-
-        // Loop On All Guess Spans
         guessSpans.forEach((span, spanIndex) => {
-
           if (WordIndex === spanIndex) {
-
             span.innerHTML = theClickedLetter;
-
           }
-
         });
-
       }
-
     });
 
 function endGame() {
