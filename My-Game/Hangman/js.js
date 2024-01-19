@@ -43,18 +43,13 @@ let lettersGuessContainer = document.querySelector(".letters-guess");
 
 let lettersAndSpace = Array.from(randomValueValue);
 
+
 lettersAndSpace.forEach(letter => {
-
   let emptySpan = document.createElement("span");
-  
   if (letter === ' ') {
-  
     emptySpan.className = 'with-space';
-  
   }
-  
   lettersGuessContainer.appendChild(emptySpan);
-
 });
 
 
