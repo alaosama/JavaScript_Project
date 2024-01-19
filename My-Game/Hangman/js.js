@@ -76,6 +76,23 @@ document.addEventListener("click", (e) => {
       }
     });
 
+
+if (theStatus !== true) {
+      wrongAttempts++;
+      theDraw.classList.add(`wrong-${wrongAttempts}`);
+      document.getElementById("fail").play();
+
+     if (wrongAttempts === 8) {
+        endGame();
+        lettersContainer.classList.add("finished");
+      }
+  
+    } else {
+      document.getElementById("success").play();
+    }
+  }
+});
+
 function endGame() {
 
   let div = document.createElement("div");
