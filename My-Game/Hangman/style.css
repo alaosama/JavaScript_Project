@@ -31,15 +31,6 @@ hr {
   font-weight: bold;
 }
 
-.letters {
-  flex: 1;
-  padding: 15px;
-  text-align: center;
-}
-.letters.finished {
-  pointer-events: none;
-}
-
 .hangman-draw {
   flex: 1;
   background-color: #F8F8F8;
