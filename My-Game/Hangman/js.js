@@ -52,7 +52,11 @@ lettersAndSpace.forEach(letter => {
   lettersGuessContainer.appendChild(emptySpan);
 });
 
+let guessSpans = document.querySelectorAll(".letters-guess span");
 
+let wrongAttempts = 0;
+
+let theDraw = document.querySelector(".hangman-draw");
 
 
 function endGame() {
