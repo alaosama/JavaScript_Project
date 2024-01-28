@@ -87,6 +87,34 @@ guessButton.disabled = true;
 getHintButton.disabled = true;
 messageArea.innerHTML = `You Lose The Word Is <span>${wordToGuess}</span>`;
 
+
+function getHint() {
+  if (numberOfHints > 0) {
+    numberOfHints--;
+    document.querySelector(".hint span").innerHTML = numberOfHints;
+  }
+  if (numberOfHints === 0) {
+    getHintButton.disabled = true;
+  }
+
+  const enabledInputs = document.querySelectorAll("input:not([disabled])");
+  // console.log(enabledInputs);
+  const emptyEnabledInputs = Array.from(enabledInputs).filter((input) => input.value === "");
+  // console.log(emptyEnabledInputs);
+
+  if (emptyEnabledInputs.length > 0) {
+    const randomIndex = Math.floor(Math.random() * emptyEnabledInputs.length);
+    const randomInput = emptyEnabledInputs[randomIndex];
+    const indexToFill = Array.from(enabledInputs).indexOf(randomInput);
+    // console.log(randomIndex);
+    // console.log(randomInput);
+    // console.log(indexToFill);
+    if (indexToFill !== -1) {
+      randomInput.value = wordToGuess[indexToFill].toUpperCase();
+    }
+  }
+}
+
 function handleBackspace(event) {
   if (event.key === "Backspace") {
     const inputs = document.querySelectorAll("input:not([disabled])");
