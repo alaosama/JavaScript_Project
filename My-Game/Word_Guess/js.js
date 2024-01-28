@@ -12,6 +12,10 @@ wordToGuess = words[Math.floor(Math.random() * words.len)].toLowerCase();
 
 // console.log(wordToGuess);
 
+document.querySelector(".hint span").innerHTML = numberOfHints;
+const getHintButton = document.querySelector(".hint");
+getHintButton.addEventListener("click", getHint);
+
 function generateInput() {
     const inputsContainer = document.querySelector(".inputs");
 
