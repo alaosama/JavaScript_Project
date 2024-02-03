@@ -47,3 +47,13 @@ body {
     text-align: center;
     font-weight: 500;
 }
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 70px;
+    font-size: 1.5em;
+    text-align: center;
+    color: #000;
+    transition: 0.5s;
+}
