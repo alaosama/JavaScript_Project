@@ -57,3 +57,19 @@ body {
     color: #000;
     transition: 0.5s;
 }
+
+.navigation ul li a .text {
+    position: absolute;
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transform: translateY(20px);
+    color: #000;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.navigation ul li:hover a .text {
+    opacity: 1;
+    transform: translateY(10px);
+}
