@@ -12,3 +12,14 @@ body {
     align-items: center;
     background: #000;
 }
+
+.navigation {
+    position: relative;
+    width: 400px;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
