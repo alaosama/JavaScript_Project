@@ -105,3 +105,28 @@ li span {
     word-wrap: break-word;
     overflow-y: scroll;
 }
+
+#editBtn,
+#deleteBtn {
+    background-color: #c6aaff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px; /* Adjusted margin for spacing */
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 60px;
+}
+
+#editBtn {
+    background-color: gainsboro;
+}
+
+#deleteBtn:hover {
+    background-color: #8c53ff;
+}
+
+#editBtn:hover {
+    background-color: gray;
+}
