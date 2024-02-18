@@ -113,3 +113,28 @@ function generateBox(x, y, z, width, depth, falls) {
     depth
   };
 }
+
+
+function cutBox(topLayer, overlap, size, delta) {
+  const direction = topLayer.direction;
+  const newWidth = direction == "x" ? overlap : topLayer.width;
+  const newDepth = direction == "z" ? overlap : topLayer.depth;
+
+  // Update metadata
+  topLayer.width = newWidth;
+  topLayer.depth = newDepth;
+
+  // Update ThreeJS model
+  topLayer.threejs.scale[direction] = overlap / size;
+  topLayer.threejs.position[direction] -= delta / 2;
+
+  // Update CannonJS model
+  topLayer.cannonjs.position[direction] -= delta / 2;
+
+  // Replace shape to a smaller one (in CannonJS you can't simply just scale a shape)
+  const shape = new CANNON.Box(
+    new CANNON.Vec3(newWidth / 2, boxHeight / 2, newDepth / 2)
+  );
+  topLayer.cannonjs.shapes = [];
+  topLayer.cannonjs.addShape(shape);
+}
