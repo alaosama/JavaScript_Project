@@ -138,3 +138,21 @@ function cutBox(topLayer, overlap, size, delta) {
   topLayer.cannonjs.shapes = [];
   topLayer.cannonjs.addShape(shape);
 }
+
+window.addEventListener("keydown", function (event) {
+  if (event.key == " ") {
+    event.preventDefault();
+    eventHandler();
+    return;
+  }
+  if (event.key == "R" || event.key == "r") {
+    event.preventDefault();
+    startGame();
+    return;
+  }
+});
+
+function eventHandler() {
+  if (autopilot) startGame();
+  else splitBlockAndAddNextOneIfOverlaps();
+}
