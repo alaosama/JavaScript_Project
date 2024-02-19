@@ -147,18 +147,14 @@ function cutBox(topLayer, overlap, size, delta) {
   const newWidth = direction == "x" ? overlap : topLayer.width;
   const newDepth = direction == "z" ? overlap : topLayer.depth;
 
-  // Update metadata
   topLayer.width = newWidth;
   topLayer.depth = newDepth;
 
-  // Update ThreeJS model
   topLayer.threejs.scale[direction] = overlap / size;
   topLayer.threejs.position[direction] -= delta / 2;
 
-  // Update CannonJS model
   topLayer.cannonjs.position[direction] -= delta / 2;
 
-  // Replace shape to a smaller one (in CannonJS you can't simply just scale a shape)
   const shape = new CANNON.Box(
     new CANNON.Vec3(newWidth / 2, boxHeight / 2, newDepth / 2)
   );
@@ -182,4 +178,49 @@ window.addEventListener("keydown", function (event) {
 function eventHandler() {
   if (autopilot) startGame();
   else splitBlockAndAddNextOneIfOverlaps();
+}
+
+function splitBlockAndAddNextOneIfOverlaps() {
+  if (gameEnded) return;
+
+  const topLayer = stack[stack.length - 1];
+  const previousLayer = stack[stack.length - 2];
+
+  const direction = topLayer.direction;
+
+  const size = direction == "x" ? topLayer.width : topLayer.depth;
+  const delta =
+    topLayer.threejs.position[direction] -
+    previousLayer.threejs.position[direction];
+  const overhangSize = Math.abs(delta);
+  const overlap = size - overhangSize;
+
+  if (overlap > 0) {
+    cutBox(topLayer, overlap, size, delta);
+
+    const overhangShift = (overlap / 2 + overhangSize / 2) * Math.sign(delta);
+    const overhangX =
+      direction == "x"
+        ? topLayer.threejs.position.x + overhangShift
+        : topLayer.threejs.position.x;
+    const overhangZ =
+      direction == "z"
+        ? topLayer.threejs.position.z + overhangShift
+        : topLayer.threejs.position.z;
+    const overhangWidth = direction == "x" ? overhangSize : topLayer.width;
+    const overhangDepth = direction == "z" ? overhangSize : topLayer.depth;
+
+    addOverhang(overhangX, overhangZ, overhangWidth, overhangDepth);
+
+    const nextX = direction == "x" ? topLayer.threejs.position.x : -10;
+    const nextZ = direction == "z" ? topLayer.threejs.position.z : -10;
+    const newWidth = topLayer.width;
+    const newDepth = topLayer.depth;
+    const nextDirection = direction == "x" ? "z" : "x";
+
+    if (scoreElement) scoreElement.innerText = stack.length - 1;
+    addLayer(nextX, nextZ, newWidth, newDepth, nextDirection);
+  } else {
+    missedTheSpot();
+  }
 }
