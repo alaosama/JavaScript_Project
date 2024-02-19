@@ -25,24 +25,22 @@ function init() {
   overhangs = [];
   setRobotPrecision();
 
-  // Initialize CannonJS
   world = new CANNON.World();
-  world.gravity.set(0, -10, 0); // Gravity pulls things down
+  world.gravity.set(0, -10, 0);
   world.broadphase = new CANNON.NaiveBroadphase();
   world.solver.iterations = 40;
 
-  // Initialize ThreeJs
   const aspect = window.innerWidth / window.innerHeight;
   const width = 10;
   const height = width / aspect;
 
   camera = new THREE.OrthographicCamera(
-    width / -2, // left
-    width / 2, // right
-    height / 2, // top
-    height / -2, // bottom
-    0, // near plane
-    100 // far plane
+    width / -2,
+    width / 2,
+    height / 2,
+    height / -2,
+    0,
+    100
   );
 
 function startGame() {
