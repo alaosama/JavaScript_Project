@@ -43,6 +43,24 @@ function init() {
     100
   );
 
+  camera.position.set(4, 4, 4);
+  camera.lookAt(0, 0, 0);
+
+  scene = new THREE.Scene();
+  addLayer(0, 0, originalBoxSize, originalBoxSize);
+  addLayer(-10, 0, originalBoxSize, originalBoxSize, "x");
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+  scene.add(ambientLight);
+
+  const dirLight = new THREE.DirectionalLight(0xffffff, 0.6);
+  dirLight.position.set(10, 20, 0);
+  scene.add(dirLight);
+  renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setAnimationLoop(animation);
+  document.body.appendChild(renderer.domElement);
+}
+
 function startGame() {
   autopilot = false;
   gameEnded = false;
