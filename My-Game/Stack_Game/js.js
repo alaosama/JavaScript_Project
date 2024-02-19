@@ -224,3 +224,20 @@ function splitBlockAndAddNextOneIfOverlaps() {
     missedTheSpot();
   }
 }
+
+function missedTheSpot() {
+  const topLayer = stack[stack.length - 1];
+
+  // Turn to top layer into an overhang and let it fall down
+  addOverhang(
+    topLayer.threejs.position.x,
+    topLayer.threejs.position.z,
+    topLayer.width,
+    topLayer.depth
+  );
+  world.remove(topLayer.cannonjs);
+  scene.remove(topLayer.threejs);
+
+  gameEnded = true;
+  if (resultsElement && !autopilot) resultsElement.style.display = "flex";
+}
