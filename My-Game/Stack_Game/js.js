@@ -1,3 +1,14 @@
+let camera, scene, renderer;
+let world;
+let lastTime;
+let stack;
+let overhangs;
+const boxHeight = 1;
+const originalBoxSize = 3;
+let autopilot;
+let gameEnded;
+let robotPrecision;
+
 const scoreElement = document.getElementById("score");
 const instructionsElement = document.getElementById("instructions");
 const resultsElement = document.getElementById("results");
