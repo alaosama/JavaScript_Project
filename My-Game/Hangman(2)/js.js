@@ -52,3 +52,12 @@ const blocker = () => {
   });
   newGameContainer.classList.remove("hide");
 };
+
+const generateWord = (optionValue) => {
+  let optionsButtons = document.querySelectorAll(".options");
+  optionsButtons.forEach((button) => {
+    if (button.innerText.toLowerCase() === optionValue) {
+      button.classList.add("active");
+    }
+    button.disabled = true;
+  });
