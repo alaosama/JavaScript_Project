@@ -114,3 +114,10 @@ canvas {
   border-radius: 0.2em;
   cursor: pointer;
 }
+
+.win-msg {
+  color: #39d78d;
+}
+.lose-msg {
+  color: #fe5152;
+}
