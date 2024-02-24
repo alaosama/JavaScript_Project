@@ -66,13 +66,57 @@ const generateWord = (optionValue) => {
   userInputSection.innerText = "";
 
   let optionArray = options[optionValue];
-  //choose random word
+
   chosenWord = optionArray[Math.floor(Math.random() * optionArray.length)];
   chosenWord = chosenWord.toUpperCase();
 
-  //replace every letter with span containing dash
   let displayItem = chosenWord.replace(/./g, '<span class="dashes">_</span>');
 
-  //Display each element as span
   userInputSection.innerHTML = displayItem;
 };
+
+
+const initializer = () => {
+  winCount = 0;
+  count = 0;
+
+  userInputSection.innerHTML = "";
+  optionsContainer.innerHTML = "";
+  letterContainer.classList.add("hide");
+  newGameContainer.classList.add("hide");
+  letterContainer.innerHTML = "";
+
+  for (let i = 65; i < 91; i++) {
+    let button = document.createElement("button");
+    button.classList.add("letters");
+    button.innerText = String.fromCharCode(i);
+    button.addEventListener("click", () => {
+      let charArray = chosenWord.split("");
+      let dashes = document.getElementsByClassName("dashes");
+      if (charArray.includes(button.innerText)) {
+        charArray.forEach((char, index) => {
+          if (char === button.innerText) {
+            dashes[index].innerText = char;
+            winCount += 1;
+            if (winCount == charArray.length) {
+              resultText.innerHTML = `<h2 class='win-msg'>You Win!!</h2><p>The word was <span>${chosenWord}</span></p>`;
+              blocker();
+            }
+          }
+        });
+      } else {
+
+        count += 1;
+
+        drawMan(count);
+
+        if (count == 6) {
+          resultText.innerHTML = `<h2 class='lose-msg'>You Lose!!</h2><p>The word was <span>${chosenWord}</span></p>`;
+          blocker();
+        }
+      }
+
+      button.disabled = true;
+    });
+    letterContainer.append(button);
+  }
