@@ -115,7 +115,10 @@ const initializer = () => {
           blocker();
         }
       }
-
+     displayOptions();
+  let { initialDrawing } = canvasCreator();
+  initialDrawing();
+};
       button.disabled = true;
     });
     letterContainer.append(button);
