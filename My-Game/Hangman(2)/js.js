@@ -123,3 +123,14 @@ const initializer = () => {
     });
     letterContainer.append(button);
   }
+
+displayOptions();
+  let { initialDrawing } = canvasCreator();
+initialDrawing();
+};
+
+const canvasCreator = () => {
+  let context = canvas.getContext("2d");
+  context.beginPath();
+  context.strokeStyle = "#000";
+  context.lineWidth = 2;
