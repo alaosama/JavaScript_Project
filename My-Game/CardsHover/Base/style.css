@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 :root{
     --card-width-lg:157px;
@@ -44,5 +43,22 @@ main{
 
 .card-pos-a{
     grid-area: a;
-    /* background-color: gray; */
+    /* background-color*/
+}
+
+.card-pos-a{
+    grid-area: a;
+    /* background-color*/
+}
+.card-pos-b{
+    grid-area: b;
+    /* background-color*/
+}
+.card-pos-c{
+    grid-area: c;
+    /* background-color*/
+}
+.card-pos-d{
+    grid-area: d;
+    /* background-color*/
 }
