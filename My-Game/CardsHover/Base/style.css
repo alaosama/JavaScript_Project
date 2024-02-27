@@ -1,1 +1,31 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+:root{
+    --card-width-lg:157px;
+    --card-height-lg:220px;
+
+    --card-width-sm:120px;
+    --card-height-sm:168px;
+
+    --num-cards:4;
+
+    --card-horizontal-space-lg: 100px;
+    --card-horizontal-space-sm: 50px;
+
+    --badge-bg-color:darkgrey;
+    --primary-color: black;
+    --secondary-color: #ffffff;
+
+    --primary-font: 'Quicksand', sans-serif;
+}
+body{
+    height:100vh;
+    font-family: var(--primary-font);
+}
+
+main{
+    height: 55%;
+    display: flex;
+    justify-content: center;
+
+}
