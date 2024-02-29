@@ -54,3 +54,25 @@ pause.addEventListener(
         reset.classList.remove("show");
     })
 );
+startBtn.addEventListener("click", () => {
+    reset.classList.add("show");
+    pause.classList.add("show");
+    startBtn.classList.add("hide");
+    startBtn.classList.add("show");
+    if (paused) {
+        paused = false;
+        time.textContent = `${appendZero(minCount)}:${apprendZero(count)}`;
+        set = setInterval(() => {
+            count--;
+            time.textContent = `${apprendZero(minCount)}:${apprendZero(count)}`;
+            if (count == 0) {
+                if (minCount != 0) {
+                    minCount--;
+                    count = 60;
+                } else {
+                    clearInterval(set);
+                }
+            }
+        }, 1000);
+    }
+});
