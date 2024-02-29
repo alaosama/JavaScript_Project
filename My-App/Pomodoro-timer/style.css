@@ -58,3 +58,22 @@ button {
     color: #ffffff;
     font-size: 5em;
 }
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+#brn-start,
+#btn-pause {
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+#btn-reset {
+    background-color: transparent;
+    border: none;
+}
