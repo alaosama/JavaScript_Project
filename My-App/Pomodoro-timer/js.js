@@ -28,3 +28,29 @@ reset.addEventListener(
         time.textContent = `${minCount + 1}:00`;
     })
 );
+
+const removeFocus = () => {
+    buttons.forEach((btn) => {
+        btn.classList.remove("btn-focus");
+    });
+};
+
+focusButton.addEventListener("click", () => {
+    removeFocus();
+    focusButton.classList.add("btn-focus");
+    pauseTimer();
+    minCount = 24;
+    count = 59;
+    time.textContent = `${minCount + 1}:00`;
+});
+
+pause.addEventListener(
+    "click",
+    (pauseTimer = () => {
+        paused = true;
+        clearInterval(set);
+        startBtn.classList.remove("hide");
+        pause.classList.remove("show");
+        reset.classList.remove("show");
+    })
+);
