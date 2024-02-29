@@ -12,3 +12,19 @@ let set;
 let count = 59;
 let paused= true;
 let moinCount = 24;
+time.textContent = `${minCount + 1}:00`;
+
+const apprendZero = (value) => {
+    value = value < 10 ? `0${value}` : value;
+    return value;
+};
+
+reset.addEventListener(
+    "click",
+    (resetTime = () => {
+        pauseTimer();
+        count = 59;
+        minCount = 24;
+        time.textContent = `${minCount + 1}:00`;
+    })
+);
