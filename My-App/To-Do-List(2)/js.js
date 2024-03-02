@@ -67,3 +67,19 @@ function editTask(index) {
     displayTasks();
   });
 }
+
+function toggleTask(index) {
+  todo[index].disabled = !todo[index].disabled;
+  saveToLocalStorage();
+  displayTasks();
+}
+
+function deleteAllTasks() {
+  todo = [];
+  saveToLocalStorage();
+  displayTasks();
+}
+
+function saveToLocalStorage() {
+  localStorage.setItem("todo", JSON.stringify(todo));
+}
