@@ -29,3 +29,21 @@ body {
   padding-bottom: 30px;
   background-color: #e2e1dc;
 }
+
+.container {
+  position: relative;
+  width: 1200px;
+  min-height: 850px;
+  margin: 0 auto;
+  padding: 5px;
+  color: #fff;
+  display: flex;
+
+  border-radius: 10px;
+  background-color: #373c4f;
+}
+
+.left {
+  width: 60%;
+  padding: 20px;
+}
