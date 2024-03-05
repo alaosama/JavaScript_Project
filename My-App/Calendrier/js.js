@@ -40,3 +40,70 @@ const months = [
 const eventsArr = [];
 getEvents();
 console.log(eventsArr);
+
+function initCalendar() {
+  const firstDay = new Date(year, month, 1);
+  const lastDay = new Date(year, month + 1, 0);
+  const prevLastDay = new Date(year, month, 0);
+  const prevDays = prevLastDay.getDate();
+  const lastDate = lastDay.getDate();
+  const day = firstDay.getDay();
+  const nextDays = 7 - lastDay.getDay() - 1;
+
+  date.innerHTML = months[month] + " " + year;
+
+  let days = "";
+
+  for (let x = day; x > 0; x--) {
+    days += `<div class="day prev-date">${prevDays - x + 1}</div>`;
+  }
+
+  for (let i = 1; i <= lastDate; i++) {
+    //check if event is present on that day
+    let event = false;
+    eventsArr.forEach((eventObj) => {
+      if (
+        eventObj.day === i &&
+        eventObj.month === month + 1 &&
+        eventObj.year === year
+      ) {
+        event = true;
+      }
+    });
+    if (
+      i === new Date().getDate() &&
+      year === new Date().getFullYear() &&
+      month === new Date().getMonth()
+    ) {
+      activeDay = i;
+      getActiveDay(i);
+      updateEvents(i);
+      if (event) {
+        days += `<div class="day today active event">${i}</div>`;
+      } else {
+        days += `<div class="day today active">${i}</div>`;
+      }
+    } else {
+      if (event) {
+        days += `<div class="day event">${i}</div>`;
+      } else {
+        days += `<div class="day ">${i}</div>`;
+      }
+    }
+  }
+
+  for (let j = 1; j <= nextDays; j++) {
+    days += `<div class="day next-date">${j}</div>`;
+  }
+  daysContainer.innerHTML = days;
+  addListner();
+}
+
+function prevMonth() {
+  month--;
+  if (month < 0) {
+    month = 11;
+    year--;
+  }
+  initCalendar();
+}
