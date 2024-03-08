@@ -60,3 +60,9 @@ body
     align-items: center;
     color: #093d67;
 }
+
+.container .glass i
+{
+    font-size: 4em;
+    color: #356f9e;
+}
