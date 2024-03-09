@@ -10,6 +10,29 @@
     <div class="container-input">
        <input type="text" placeholder="Search" name="text" class="input" /> 
     </div>
-
+    <style>
+        .container-input {
+            position: relative;
+        }
+        .input {
+            width: 200px;
+            padding: 20px 0px 20px 40px;
+            border-radius: 9999px;
+            border: solid 1px #000;
+            transition: all .2s ease-in-out;
+            outline: none;
+            opacity: 0.8;
+        }
+        .container-input svg {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(0, -50%);
+        }
+        .input:focus {
+            width: 300px;
+            opacity: 1;
+        }
+    </style>
 </body>
 </html>
