@@ -19,7 +19,27 @@
             animation: load 2s linear infinite;
             border-top: 5px solid #012605;
         }
-    
+        .loader::before, .loader::after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            width: 0px;
+            height: 100px;
+            bottom: 100px;
+            box-sizing: border-box;
+            border-radius: 50%;
+        }
+        .loader span {
+            position: absolute;
+            font-size: small;
+            width: 100px;
+            height: 100px;
+            color: #0b3c10;
+            text-align: center;
+            line-height: 100px;
+            animation: a2 2s linear infinite;
+        }
+        
     </style>
 
 </body>
