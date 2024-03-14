@@ -13,4 +13,13 @@ let swiperCards = new Swiper('.card__content', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+
+    breakpoints: {
+        600:{
+            slidesPerView: 2,
+        },
+        968:{
+            slidesPerView: 3,
+        },
+    },
 });
