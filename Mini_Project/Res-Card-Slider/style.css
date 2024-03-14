@@ -1,1 +1,65 @@
+@import url("");
 
+:root {
+    --first-color: hsl(38, 92%, 58%);
+    --first-color-light: hsl(38, 100%, 78%);
+    --first-color-alt: hsl(113, 52%, 28%);
+    --second-color: hsl(169, 88%, 26%);
+    --dark-color: hsl(293, 95%, 16%);
+    --white-color: hsl(38, 92%, 58%);
+    --body-color: hsl(47, 91%, 13%);
+    --container-color: hsl(101, 95%, 8%);
+
+    --body-font: "Bai Jamjuree", sans-serif;
+    --h2-font-size: 2.5rem;
+    --normal-font-size: 1.125rem;
+}
+
+
+        /* BASE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+    color: var(--white-color);
+    font-size: var(--normal-font-size);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+        /* CARD */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__container {
+    padding-block: 5rem;  
+}
+
+.card__content {
+    margin-inline: 1.75rem;
+    border-radius: 1.25rem;
+    overflow: hidden;
+}
+
+.card__article {
+    width: 300px;
+    border-radius: 1.25rem;
+    overflow: hidden;
+}
