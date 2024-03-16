@@ -122,3 +122,59 @@ img {
   font-weight: 500;
 }
 
+.card__social {
+  display: flex;
+  column-gap: .75rem;
+}
+
+.card__social a {
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+
+.card__image {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 0 auto 1rem;
+}
+
+.card__status {
+  width: 12px;
+  height: 12px;
+  background-color: var(--second-color);
+  position: absolute;
+  top: .5rem;
+  right: .75rem;
+  border-radius: 50%;
+  border: 2px solid var(--container-color);
+}
+
+.card__data {
+  text-align: center;
+}
+
+.card__name {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  font-weight: 600;
+  margin-bottom: .25rem;
+}
+
+.card__profession {
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.card__button {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  color: var(--first-color);
+  font-weight: 500;
+}
+
+.card__button i {
+  font-size: 1.25rem;
+}
