@@ -84,3 +84,41 @@ img {
   pointer-events: none;
   opacity: 0;
 }
+
+.card__content {
+  position: relative;
+  width: calc(100vw - 3rem);
+  background-color: var(--container-color);
+  box-shadow: 0 16px 32px hsla(230, 50%, 20%, .1);
+  padding: 2rem 1.5rem;
+  border-radius: 1.5rem;
+}
+
+.card__content::after {
+  content: "";
+  width: 32px;
+  height: 32px;
+  background-color: var(--container-color);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -.75rem;
+  margin-inline: auto;
+  border-radius: .25rem;
+  rotate: 45deg;
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card__header span {
+  color: var(--title-color);
+  font-weight: 500;
+}
+
