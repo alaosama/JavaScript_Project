@@ -178,3 +178,21 @@ img {
 .card__button i {
   font-size: 1.25rem;
 }
+
+.card__article:hover .card__profile {
+  transform: scale(.8);
+  opacity: .7;
+}
+
+.card__article:hover .card__tooltip {
+  opacity: 1;
+  pointer-events: initial;
+  bottom: 4rem;
+}
+
+@media screen and (min-width: 540px) {
+  .card__content {
+    width: 380px;
+    padding-inline: 2rem;
+  }
+}
