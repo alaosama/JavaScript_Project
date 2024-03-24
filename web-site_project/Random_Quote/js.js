@@ -41,3 +41,8 @@ const arrayOfQuotes = [
   },
 ];
 
+function generateQuote() {
+  let random = Number.parseInt(Math.random() * arrayOfQuotes.length + 1);
+  quoteOutput.innerHTML = `<span>${arrayOfQuotes[random].quote}</span>`;
+  authorOutput.innerHTML = `<small>-${arrayOfQuotes[random].author}-</small>`;
+}
