@@ -1,1 +1,20 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  margin: 0;
+  background: linear-gradient(blueviolet, rgb(79, 21, 134));
+}
+
+#insert {
+  background: white;
+  padding: 50px;
+}
