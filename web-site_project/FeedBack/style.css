@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
 }
@@ -39,4 +38,30 @@ body {
   align-items: center;
   text-align: center;
   width: 500px;
+}
+
+.rating {
+  flex: 1;
+  padding: 20px;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+
+.rating:hover,
+.rating.active {
+  border-radius: 4px;
+  background-color: #ccc;
+  transition: 1s ease;
+}
+
+.rating .icon {
+  width: 40px;
+  font-size: 5rem;
+  margin-right: 10px;
+}
+
+.rating small {
+  color: #fff;
+  display: inline-block;
+  margin: 10px 0 0;
 }
