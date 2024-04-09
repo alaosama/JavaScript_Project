@@ -1,1 +1,18 @@
+#draggable {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 100px;
+  cursor: move;
+}
 
+#droppable {
+  width: 200px;
+  height: 200px;
+  background-color: lightgrey;
+  border: 2px dashed black;
+  text-align: center;
+  line-height: 200px;
+}
