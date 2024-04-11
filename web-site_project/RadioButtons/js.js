@@ -91,3 +91,23 @@ const inchupkeyframes = [
         bottom: `${0.75 + 3 * diff}em`
     }
 ];
+
+const duration = 900;
+const bezier = "cubic-bezier (0.65,0,0.35,1)";
+const optionAConfig = { duration };
+const optionBConfig = { duration };
+
+if (ALessThanB) {
+    optionBConfig.easing = bezier;
+} else {
+    optionBConfig.easing = bezier;
+}
+
+this.optionAAnim?.cancel();
+this.optionAAnim = optionAEl.animate(
+    ALessThanB ? dropKeyframes : inchUpKeyframes,optionAConfig
+);
+this.optionBAnim?.cancel();
+this. optionBAnim = optionBEl. animate(
+    AlessThanB ? inchupkeyframes : dropkeyframes, optionBConfig
+);
