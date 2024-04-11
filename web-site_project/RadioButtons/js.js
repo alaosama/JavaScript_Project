@@ -18,3 +18,51 @@ class Dropp {
         this.optionID = nextOption;
     }
 }
+
+animateOption (optionA,optionB) {
+    const diff = Math.abs(optionA - optionB);
+    const OptionAEl = this.el.querySelector(`[data-option="${optionA}"]`);
+    const optionBEl = this.el.querySetactor(`[data-option="${optionB}"]`);
+    const ALessThanB = optionA < optionB;
+    const dropcolor =  `var(--radio-${AlessThanB ? "on" : "off"})`;
+    const inchColor =  `var(--radio-${AlessThanB ? "on" : "off"})`;
+    const dropkeyframes = [
+        {
+            backgroundColor: dropcolor,
+            transform: `translateY(0)`,
+            zIndex: 1
+        },
+        {
+            backgroundColor: dropcolor,
+            transform: `translateY(0)`,
+            zIndex: 1,
+            offset: 0.4,
+            easing: "cubic-bezier(0.32,0,0.67,0)"
+        },
+        {
+            backgroundColor: dropcolor,
+            transform: `translateY(${3 * diff}em)`,
+            zIndex: 1, 
+            offset: 0.5, 
+            easing: "cubic-bezier (0.32,1,0.67,1)"
+        },
+        {
+            backgroundColor: dropcolor,
+            transform: `translateY(${2.5 * diff}em)`,
+            zIndex: 1, 
+            offset: 0.6, 
+            easing: "cubic-bezier(0.32,1,0.67,1)"
+        },
+        {
+            backgroundColor: dropcolor,
+            transform: `translateY(${3 * diff}em)`,
+            zIndex: 1, 
+            offset: 0.7, 
+        },
+        {
+            backgroundColor: dropcolor,
+            transform: `translateY(${3 * diff}em)`,
+            zIndex: 1, 
+        },
+    ]
+};
