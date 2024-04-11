@@ -66,3 +66,28 @@ animateOption (optionA,optionB) {
         },
     ]
 };
+
+const inchupkeyframes = [
+    {
+        backgroundColor: inchColor,
+        height: `1.5em`,
+        bottom: `0.75em`
+    },
+    {
+        backgroundColor: inchColor,
+        height: `${1.5 + 3 * diff}em`,
+        bottom: `0.75em`,
+        offset: 0.1
+    },
+    {
+        backgroundColor: inchColor,
+        height: `${1.5 + 3 * diif}em`,
+        bottom: `0.75em`,
+        offset: 0.9
+    },
+    {
+        backgroundColor: inchColor,
+        height: `1.5em`,
+        bottom: `${0.75 + 3 * diff}em`
+    }
+];
