@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checklist</title>
+    <style>
+        ul:not(:has(input:not(:checked))) {
+            background: #99FF99;
+            color: #000;
+            }
+        :checked + label {
+                text-decoration: line-through;
+                font-style: italic;
+        }
+    </style>
 </head>
 <body>
     <ul>
