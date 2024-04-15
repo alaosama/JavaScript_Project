@@ -11,3 +11,21 @@ let weather__realfeel = document.querySelector(".weather__realfeel");
 let weather__humidity = document.querySelector(".weather__humidity");
 let weather__wind = document.querySelector(".weather__wind");
 let weather__pressure = document.querySelector(".weather__pressure");
+
+// Search
+
+document.querySelector("weather__search").addEventListener('submit', e => {
+    let search = document.querySelector("weather__searchform");
+
+    // prevent default action
+    e.preventDefault();
+
+    // change current city
+    currCity = search.value;
+
+    // get weather forecast
+    getWeather();
+
+    // clear form
+    search.value = "";
+})
