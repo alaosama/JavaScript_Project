@@ -68,3 +68,33 @@ function convertTimeStamp(timestamp, timezone){
     
     return date.toLocaleDateString("en-US", options)
 }
+
+// Convert Country Code To Name
+
+function convertCountryCode(country) {
+    let regionNames = new Intl.DisplayNames(["en"], {type: "region"});
+    return regionNames.of(country)
+}
+
+function getWeather(){
+    const API_KEY = 'Your_API_key'
+}
+
+
+fetch(`https://api.openweathermap.org/data/2.5/weather?q= 
+${currCity}&appid=${API_KEY}&units=${units}`).then(res => res.json()).then(data => {
+    console.log(data)
+    city.innerTML = `${data.name}, ${convertCountryCode(data.sys.country)}` 
+    datetime.innerHTML = convertTimeStamp(data.dt, data.timezone); 
+    weather__forecast.innerHTML = `<p>$(data.weather[0].main)`
+    weather__temperature.innerTML = `${data.main.temp.toFixed()}&#176`
+    weather__icon.innerHTML = `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png"/>`
+    weather__minmax.innerTML = `<p>Min: ${data.main.temp_min.toFixed()}&#176</p>
+    <p>Max: ${data.main.temp_max.toFixed()}&#176</p>`
+    weather__realfeel.innerHTML = `${data.main.feels_like.toFixed()}&#176`
+    weather__humidity.innerHTML = `${data.main.humidity}%`
+    weather__wind.innerHTML = `${data.wind.speed} ${units === "imperial" ? "mph": "m/s"}`
+    weather__pressure.innerHTML = `${data.main.pressure} hPa`
+})
+
+document.body.addEventListener('load', getWeather())
