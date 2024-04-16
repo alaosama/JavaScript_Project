@@ -30,3 +30,16 @@ const refreshBtnClick = () => {
     captchaInputBox.value = "";
     captchaKeyUpValidate();
 }
+
+const refreshBtnClick = () => {
+    generateCaptcha();
+    captchaInputBox.value = "";
+    captchaKeyUpValidate();
+}
+
+const captchaKeyUpValidate = () => {
+    //Toggle submit button disable class based on captcha input field.
+    submitButton.classList.toggle("disabled", !captchaInputBox.value);
+
+    if (!captchaInputBox.value) message.classList.remove("active");
+}
