@@ -22,3 +22,50 @@ header {
     margin-top: 15px;
     width: 100%;
 }
+
+.refresh_button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    height: 30px;
+    transform: translateY((50%));
+    width: 30px;
+    background: #f8f8f8;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.refresh_button:active {
+    transform: translateY(-50%) scale(0.98);
+}
+
+.input_field input,
+.button button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+.message.active {
+    display: black;
+}
+
+.button button {
+    background: #826afb;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.button button:active {
+    transform: scale(0.98);
+}
+
+.button.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
