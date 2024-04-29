@@ -13,3 +13,28 @@ const summaryServiceSection = document.querySelector(
   '.summary-service-section'
 );
 const totalPriceSection = document.querySelector('.total-price-section');
+
+let page = 1;
+let selectService = {
+  name: '',
+  email: '',
+  phone: '',
+  plan: {
+    name: 'Arcade',
+    price: 9,
+    planType: 'Monthly',
+  },
+  addOns: [],
+};
+
+function createHeaderSection(headingText, description) {
+  descriptionSection.innerHTML = '';
+  const h1 = document.createElement('h1');
+  h1.innerText = headingText;
+
+  const p = document.createElement('p');
+  p.innerText = description;
+
+  descriptionSection.appendChild(h1);
+  descriptionSection.appendChild(p);
+}
