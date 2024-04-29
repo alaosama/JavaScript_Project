@@ -38,3 +38,9 @@ function createHeaderSection(headingText, description) {
   descriptionSection.appendChild(h1);
   descriptionSection.appendChild(p);
 }
+
+function removeActiveOnSidebarNumber() {
+  sidebarNumberSections.forEach((sidebarNumber) => {
+    sidebarNumber.classList.remove('sidebar-number-active');
+  });
+}
