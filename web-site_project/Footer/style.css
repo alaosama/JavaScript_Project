@@ -1,4 +1,4 @@
-/* :root {
+/* /* :root {
     --primary: #3ECF8E;
 }
 
@@ -22,3 +22,36 @@ main {
 }
 
 /* footer containers*/
+/* footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: var(--footer-bg);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+::selection {
+    background: var(--primary);
+    color: var(--footer-bg);
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--footer-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 4rem;
+    padding-top: 1rem;
+}
+ */ 
