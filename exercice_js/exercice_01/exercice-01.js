@@ -4,6 +4,7 @@ const moveCharsForwardInAlphabet = (
 ) => {
     if (!str) {
         return '';
+        
     }
 
     return str
