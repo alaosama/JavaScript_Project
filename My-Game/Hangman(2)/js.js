@@ -134,3 +134,4 @@ const canvasCreator = () => {
   context.beginPath();
   context.strokeStyle = "#000";
   context.lineWidth = 2;
+}
