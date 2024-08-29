@@ -1,6 +1,5 @@
 // function = A section of reusable code.
 
-
 function add(x, y) {
     return x + y;
 }
@@ -24,7 +23,3 @@ function isEven(number) {
 function isValidEmail(email) {
     return email.includes("@") ? true : false;
 }
-
-console.log(isValidEmail("osama@fake.com"));
-console.log(isValidEmail("osama.com"));
-console.log(isValidEmail("osama@fake.com"));
