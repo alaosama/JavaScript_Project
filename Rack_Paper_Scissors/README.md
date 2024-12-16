@@ -1,61 +1,56 @@
-
 # Rack_Paper_Scissors
 
-**Rack_Paper_Scissors** est une implémentation simple et amusante du jeu classique **Pierre-Papier-Ciseaux**, développée en **HTML**, **CSS**, et **JavaScript**.
+**Rack_Paper_Scissors** is a simple and fun implementation of the classic **Rock-Paper-Scissors** game, developed using **HTML**, **CSS**, and **JavaScript**.
 
-## 🎮 Fonctionnalités
+## 🎮 Features
 
-- Jouez contre l'ordinateur avec des règles classiques.
-- Interface utilisateur interactive et attrayante.
-- Affichage en direct des scores et du gagnant.
-- Complètement réactif pour une expérience fluide sur tous les appareils.
+- Play against the computer with classic rules.
+- Interactive and engaging user interface.
+- Live display of scores and the winner.
+- Fully responsive for a smooth experience on all devices.
 
-## 🛠️ Technologies utilisées
+## 🛠️ Technologies Used
 
-- **HTML5** : Structure et contenu de la page.
-- **CSS3** : Styles, animations et mise en page.
-- **JavaScript** : Logique du jeu et interactions dynamiques.
+- **HTML5**: Structure and content of the page.
+- **CSS3**: Styles, animations, and layout.
+- **JavaScript**: Game logic and dynamic interactions.
 
-## 🚀 Comment commencer ?
+## 🚀 How to Get Started?
 
-### Étape 1 : Clonez le projet
+### Step 1: Clone the Project
 ```bash
-git clone https://github.com/votre_nom_utilisateur/Rack_Paper_Scissors.git
+git clone https://github.com/your_username/Rack_Paper_Scissors.git
 ```
 
-### Étape 2 : Accédez au répertoire du projet
+### Step 2: Navigate to the Project Directory
 ```bash
 cd Rack_Paper_Scissors
 ```
 
-### Étape 3 : Ouvrez le fichier `index.html` dans votre navigateur
-Vous pouvez simplement double-cliquer sur le fichier `index.html` ou utiliser un serveur local comme [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) dans VS Code.
+### Step 3: Open the `index.html` File in Your Browser
+You can simply double-click the `index.html` file or use a local server like [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) in VS Code.
 
-## 🎯 Règles du jeu
+## 🎯 Game Rules
 
-1. **Pierre** bat **Ciseaux**.
-2. **Ciseaux** bat **Papier**.
-3. **Papier** bat **Pierre**.
-4. Sélectionnez votre choix, et l'ordinateur choisira le sien aléatoirement. Le gagnant sera déterminé selon les règles ci-dessus.
+1. **Rock** beats **Scissors**.
+2. **Scissors** beats **Paper**.
+3. **Paper** beats **Rock**.
+4. Select your choice, and the computer will randomly choose its own. The winner will be determined based on the rules above.
 
-## 🎨 Aperçu visuel
+## 🎨 Visual Preview
 
-![Aperçu du jeu](./assets/preview.png)  
-*Une interface utilisateur moderne et intuitive !*
+![Game Preview](./assets/preview.png)  
+*A modern and intuitive user interface!*
 
-## 🤝 Contribuer
+## 🤝 Contributing
 
-Les contributions sont les bienvenues ! Voici comment vous pouvez contribuer :
-1. Forkez le projet.
-2. Créez une nouvelle branche (`git checkout -b feature/nom-de-la-fonctionnalité`).
-3. Faites vos modifications et effectuez un commit (`git commit -m "Ajout d'une fonctionnalité"`).
-4. Poussez la branche (`git push origin feature/nom-de-la-fonctionnalité`).
-5. Ouvrez une pull request.
-
-## 📄 Licence
-
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](./LICENSE) pour plus d'informations.
+Contributions are welcome! Here’s how you can contribute:
+1. Fork the project.
+2. Create a new branch (`git checkout -b feature/feature-name`).
+3. Make your changes and commit them (`git commit -m "Add a new feature"`).
+4. Push the branch (`git push origin feature/feature-name`).
+5. Open a pull request.
 
 ---
 
-Amusez-vous à jouer à **Rack_Paper_Scissors** et n'hésitez pas à partager vos retours et suggestions ! 🎉
+Have fun playing **Rack_Paper_Scissors**, and feel free to share your feedback and suggestions! 🎉
