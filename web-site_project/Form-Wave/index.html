@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,17 +8,19 @@
   </head>
   <body>
     <main class="container">
-      <h1>Place <span class="special">Login</span></h1>
+      <h1>
+        Place <span class="special">Login</span>
+      </h1>
       <form>
         <section class="form-control">
-          <input type="text" required />
-          <label>Email</label>
+          <input type="text" id="email" aria-label="Email" aria-required="true" required />
+          <label for="email">Email</label>
         </section>
         <section class="form-control">
-          <input type="password" required />
-          <label>Password</label>
+          <input type="password" id="password" aria-label="Password" aria-required="true" required />
+          <label for="password">Password</label>
         </section>
-        <button class="btn">Login</button>
+        <button class="btn" type="submit">Login</button>
       </form>
     </main>
     <script src="js.js"></script>
